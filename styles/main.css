@@ -1,2 +1,48 @@
 @import "tailwindcss";
+@import url("./light.css");
 
+body {
+    background-color: var(--md-sys-color-background);
+}
+
+footer {
+    background-color: black;
+    color: var(--md-sys-color-on-primary);
+
+    input {
+        background-color: var(--md-sys-color-inverse-surface);
+        color: var(--md-sys-color-inverse-on-surface);
+    }
+
+    label {
+        position: absolute;
+        clip: rect(0, 0, 0, 0);
+    }
+}
+
+button {
+    background-color: var(--md-sys-color-primary);
+}
+
+.o-info {
+    color: var(--md-sys-color-primary);
+}
+
+.copyright {
+    text-align: center;
+    border-top: solid .1px var(--md-sys-color-surface-container-lowest);
+    padding-left: 6em;
+    padding-right: 6em;
+}
+
+.iam {
+    display: inline-block;
+    padding-left: .1em;
+    padding-right: .1em;
+    background-image: linear-gradient(transparent 55%,
+            var(--md-sys-color-tertiary-container) 55%);
+}
+.home-footer{
+    background-color: black;
+    color: white;
+}
