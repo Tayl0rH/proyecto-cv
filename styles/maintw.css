@@ -193,8 +193,8 @@
   .h-15 {
     height: calc(var(--spacing) * 15);
   }
-  .h-96 {
-    height: calc(var(--spacing) * 96);
+  .max-h-dvh {
+    max-height: 100dvh;
   }
   .min-h-dvh {
     min-height: 100dvh;
@@ -211,14 +211,11 @@
   .w-20 {
     width: calc(var(--spacing) * 20);
   }
-  .w-40 {
-    width: calc(var(--spacing) * 40);
-  }
-  .w-50 {
-    width: calc(var(--spacing) * 50);
-  }
   .w-fit {
     width: fit-content;
+  }
+  .w-full {
+    width: 100%;
   }
   .border-collapse {
     border-collapse: collapse;
@@ -237,9 +234,6 @@
   }
   .flex-row {
     flex-direction: row;
-  }
-  .content-around {
-    align-content: space-around;
   }
   .items-center {
     align-items: center;
