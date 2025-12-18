@@ -1,0 +1,13 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="instagramGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f09433"></stop>
+      <stop offset="25%" stop-color="#e6683c"></stop>
+      <stop offset="50%" stop-color="#dc2743"></stop>
+      <stop offset="75%" stop-color="#cc2366"></stop>
+      <stop offset="100%" stop-color="#bc1888"></stop>
+    </linearGradient>
+  </defs>
+
+  <path d="M50 50 L150 50 L150 150 L50 150 Z" fill="url(#instagramGradient)"></path>
+</svg>

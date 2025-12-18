@@ -1,8 +1,142 @@
 @import "tailwindcss";
 @import url("./light.css");
 
+
+/* --------- ANIMACIONES --------- */
+
+
+@keyframes slide-in-right-menu {
+    0% {
+        -webkit-transform: translateX(1000px);
+        transform: translateX(1000px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* --------- ANIMACIONES --------- */
+
 body {
     background-color: var(--md-sys-color-background);
+}
+
+header {
+    .menu-displayer {
+        display: none;
+
+    }
+}
+
+/* --------- RESPONSIVE TELÉFONOS --------- */
+@media only screen and (max-width: 600px) {
+    header {
+        justify-content: space-between;
+        margin-top: .5em;
+        margin-left: .1em;
+
+        .menu-displayer {
+            display: block;
+
+            #menu-displayer {
+                display: none;
+            }
+        }
+
+        .display-menu,
+        .contant-me {
+            display: none;
+        }
+
+        label {
+            margin-right: 5px !important;
+        }
+
+
+        /* --------- DESPLEGABLE --------- */
+        .displayable-menu:has(input:checked) {
+            .display-menu {
+                background-color: var(--md-sys-color-background);
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                margin-top: 40px;
+                justify-content: space-between;
+                width: 100vw;
+                height: 92vh;
+                left: 0;
+
+                z-index: 10;
+
+                a {
+                    height: 50px;
+                    font-size: larger;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex: 1;
+                }
+
+                a:hover {
+                    background-color: var(--md-sys-color-primary);
+                    color: var(--md-sys-color-on-primary);
+                }
+
+
+
+            }
+        }
+    }
+
+    main {
+        #home {
+            .first-home-section {
+                display: flex;
+                margin: .5em;
+                margin-bottom: 0;
+                flex-direction: column;
+                justify-content: space-between;
+                bottom: 0;
+
+                p,
+                button {
+                    display: none;
+                }
+
+                div {
+                    margin: auto 0;
+                }
+            }
+
+            #home-image {
+                align-self: center;
+
+                img {
+                    min-width: 50vw;
+                    background-color: var(--md-sys-color-primary);
+                    border-radius: 50%;
+                    border-style: unset;
+                }
+            }
+
+            .home-follow-me {
+                padding-top: 50px;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 768px){
+    #home-image {
+    img {
+        max-width: inherit !important;
+        height: inherit !important;
+        width: 50vw !important;
+    }
+}
 }
 
 footer {
@@ -42,7 +176,86 @@ button {
     background-image: linear-gradient(transparent 55%,
             var(--md-sys-color-tertiary-container) 55%);
 }
-.home-footer{
+
+.home-footer {
     background-color: black;
     color: white;
+}
+
+.me-image-bg {
+    background-color: var(--md-sys-color-primary);
+}
+
+#home {
+    min-height: 91.5dvh;
+
+}
+
+#home-image {
+    img {
+        max-width: inherit !important;
+        height: inherit !important;
+        width: 23vw !important;
+    }
+}
+
+
+.github-icon {
+    transition:
+        transform 0.25s ease,
+        filter 0.25s ease;
+
+    path {
+        transition: fill 0.25s ease;
+    }
+}
+
+.github-icon:hover {
+    transform: scale(1.12);
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.25));
+
+    path {
+        fill: black;
+    }
+}
+
+
+.linkedin-icon {
+    transition:
+        transform 0.25s ease,
+        filter 0.25s ease;
+
+    path {
+        transition: fill 0.25s ease;
+    }
+}
+
+.linkedin-icon:hover {
+    transform: scale(1.12);
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.25));
+
+    path {
+        fill: #0e76a8;
+    }
+
+}
+
+.ig-icon {
+    transition:
+        transform 0.25s ease,
+        filter 0.25s ease;
+
+    path {
+        transition: fill 0.25s ease;
+    }
+}
+
+.ig-icon:hover {
+    transform: scale(1.12);
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.25));
+
+    path {
+        fill: #E1306C;
+    }
+
 }
