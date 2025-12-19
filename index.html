@@ -39,14 +39,14 @@
     <main>
         <section id="home" class="flex flex-col">
             <section class="flex justify-around flex-1 first-home-section">
-                <div class="self-center">
+                <div class="self-center" id="home-welcome">
                     <h2 class="text-5xl iam">Hello I Am</h2>
                     <h2 class="text-9xl">Taylor</h2>
                     <p class="my-5">Welcome to my creative CV! I'm Taylor, a passionate Web Developer<br>
                         designer dedicated to turning ideas into seamless and engaging <br>digital experiences.
                     </p>
                     <button class="text-white px-6 py-3 cursor-pointer mb-5">Schedule A Meeting</button>
-                    <div class="flex items-center home-follow-me">
+                    <div class="flex items-center home-follow-me text-2xl">
                         <span>Follor Me On:</span>
                         <svg class="w-10 github-icon" xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
@@ -92,45 +92,46 @@
             </section>
         </section>
 
-        <section id="about-me" class="flex justify-around items-center gap-5 min-h-dvh">
-            <section class="flex-1">
-                <h1 class="text-5xl font-extrabold">About Me</h1>
-                <p class="mt-5 mb-5">Welcome to my creative space! I'm Taylor <br>
-                    A passionate Web Developer & UI/UX designer on a mission <br>
-                    to transform ideas into seamless and engaging digital <br>
-                    experiences. From wireframes to pixel-perfect designs, <br>
-                    I thrive on bringing innovation and user-centric solutions <br>
-                    to every project.
+        <section id="about-me" class="flex justify-evenly items-center gap-5 min-h-dvh">
+            <section class="about-me-section">
+                <h1 class="text-7xl font-extrabold ">About Me</h1>
+                <p class="my-20 text-2xl">Welcome to my creative space! I'm Taylor <br>
+                    A Web Developer and UI/UX designer trained in<br>
+                    Higher Vocational Education in Web Application Development.<br>
+                    I’m driven by the challenge of turning ideas into clean, intuitive<br>
+                    and engaging digital experiences. From structure and logic<br>
+                    to wireframes and pixel-perfect interfaces, I enjoy building<br>
+                    user-centred solutions where design and development work as one.
                 </p>
-                <div class="ml-5">
+                <div class="ml-5 text-2xl font-medium">
                     <ul class="grid grid-cols-2 list-disc">
                         <li>UI/UX design</li>
-                        <li>Product Design</li>
-                        <li> Graphic Design</li>
+                        <li>Web Development</li>
+                        <li>Graphic Design</li>
                         <li>Web Design</li>
                     </ul>
                 </div>
             </section>
-            <section class="flex-1">
+            <section class="about-me-img">
                 <img src="images/home-img/taylor-home.png" class="me-image-bg"
                     alt="Otra vez más, el protagonista de esta pag, yo.">
             </section>
-            <section class="flex-1">
+            <section class="about-me-inf p-15 flex flex-col gap-16">
                 <div>
-                    <h2>1+</h2>
-                    <span>Years Of Experience</span>
+                    <h2 class="font-bold text-2xl">Angular</h2>
+                    <span class="text-2xl">Frontend Framework</span>
                 </div>
                 <div>
-                    <h2>5+</h2>
-                    <span>Projects Complete</span>
+                    <h2 class="font-bold text-2xl">TypeScript</h2>
+                    <span class="text-2xl">Clean Code</span>
                 </div>
                 <div>
-                    <h2>100%</h2>
-                    <span>Satisfied</span>
+                    <h2 class="font-bold text-2xl">PHP + Laravel</h2>
+                    <span class="text-2xl">Backend Logic</span>
                 </div>
                 <div>
-                    <h2>1</h2>
-                    <span>Award Winner</span>
+                    <h2 class="font-bold text-2xl">SASS</h2>
+                    <span class="text-2xl">Modular Styles</span>
                 </div>
             </section>
         </section>
