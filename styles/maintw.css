@@ -175,6 +175,9 @@
   }
 }
 @layer utilities {
+  .m-5 {
+    margin: calc(var(--spacing) * 5);
+  }
   .my-5 {
     margin-block: calc(var(--spacing) * 5);
   }
@@ -225,9 +228,6 @@
   }
   .flex-1 {
     flex: 1;
-  }
-  .transform {
-    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
   .cursor-pointer {
     cursor: pointer;
@@ -380,9 +380,12 @@ header {
   .menu-displayer {
     display: none;
   }
+  button {
+    background-color: var(--md-sys-color-primary);
+  }
 }
 footer {
-  background-color: black;
+  background-color: var(--md-sys-color-on-background);
   color: var(--md-sys-color-on-primary);
   input {
     background-color: var(--md-sys-color-inverse-surface);
@@ -401,9 +404,10 @@ footer {
     padding-left: 6em;
     padding-right: 6em;
   }
-}
-button {
-  background-color: var(--md-sys-color-primary);
+  button {
+    background-color: var(--md-sys-color-primary);
+    height: 44px;
+  }
 }
 #home {
   min-height: 93dvh;
@@ -414,7 +418,7 @@ button {
     background-image: linear-gradient(transparent 55%, var(--md-sys-color-tertiary-container) 55%);
   }
   .home-footer {
-    background-color: black;
+    background-color: var(--md-sys-color-on-background);
     color: white;
     padding: 3em;
     div:hover {
@@ -437,7 +441,7 @@ button {
     transform: scale(1.12);
     filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.25));
     path {
-      fill: black;
+      fill: var(--md-sys-color-on-background);
     }
   }
   .linkedin-icon {
@@ -482,6 +486,45 @@ button {
   }
   .about-me-inf {
     background-color: var(--md-sys-color-tertiary-container);
+    text-align: center;
+  }
+}
+#skills {
+  background-color: var(--md-sys-color-on-background);
+  color: white;
+  min-height: 100vh;
+  #skills-header {
+    input {
+      background-color: var(--md-sys-color-tertiary-container);
+      padding: 0 1em 0 1em;
+      color: var(--md-sys-color-on-background);
+    }
+  }
+  #skills-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.3em;
+    .cards {
+      background-color: var(--md-sys-color-inverse-surface);
+      color: var(--md-sys-color-inverse-on-surface);
+      padding: .5em;
+      text-align: center;
+      border-radius: 2px;
+      svg {
+        width: 5em;
+        margin: 0 auto;
+        path {
+          fill: var(--md-sys-color-primary);
+        }
+      }
+      h2 {
+        font-size: x-large;
+      }
+    }
+    .cards:last-child {
+      grid-column: 1/3;
+      margin: 0 7em;
+    }
   }
 }
 .me-image-bg {
@@ -656,26 +699,23 @@ button {
       justify-content: space-around;
     }
   }
-}
-@property --tw-rotate-x {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-rotate-y {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-rotate-z {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-skew-x {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-skew-y {
-  syntax: "*";
-  inherits: false;
+  #skills {
+    background-color: var(--md-sys-color-on-background);
+    color: white;
+    min-height: 100vh;
+    #skills-header {
+      input {
+        background-color: var(--md-sys-color-tertiary-container);
+        padding: 0 1em 0 1em;
+        color: var(--md-sys-color-on-background);
+      }
+    }
+    #skills-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.3em;
+    }
+  }
 }
 @property --tw-font-weight {
   syntax: "*";
@@ -684,11 +724,6 @@ button {
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
-      --tw-rotate-x: initial;
-      --tw-rotate-y: initial;
-      --tw-rotate-z: initial;
-      --tw-skew-x: initial;
-      --tw-skew-y: initial;
       --tw-font-weight: initial;
     }
   }
