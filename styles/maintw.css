@@ -175,6 +175,9 @@
   }
 }
 @layer utilities {
+  .m-3 {
+    margin: calc(var(--spacing) * 3);
+  }
   .m-5 {
     margin: calc(var(--spacing) * 5);
   }
@@ -307,6 +310,9 @@
   .pb-15 {
     padding-bottom: calc(var(--spacing) * 15);
   }
+  .text-center {
+    text-align: center;
+  }
   .text-2xl {
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
@@ -370,6 +376,16 @@
     -webkit-filter: blur(0);
     filter: blur(0);
     opacity: 1;
+  }
+}
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-.5em);
+    transform: translateY(-.5em);
   }
 }
 body {
@@ -494,9 +510,12 @@ footer {
   color: white;
   min-height: 100vh;
   #skills-header {
+    display: flex;
+    align-items: center;
     input {
       background-color: var(--md-sys-color-tertiary-container);
-      padding: 0 1em 0 1em;
+      height: min-content;
+      padding: 1em;
       color: var(--md-sys-color-on-background);
     }
   }
@@ -520,6 +539,9 @@ footer {
       h2 {
         font-size: x-large;
       }
+    }
+    .cards:hover {
+      animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     }
     .cards:last-child {
       grid-column: 1/3;
@@ -638,6 +660,27 @@ footer {
       justify-content: space-around !important;
     }
   }
+  footer {
+    section {
+      display: flex;
+      flex-direction: column;
+      section {
+        p {
+          display: none;
+        }
+        h2 {
+          display: none;
+        }
+      }
+      section:first-child {
+        align-items: center;
+        gap: 2em;
+      }
+      section:last-child {
+        display: none;
+      }
+    }
+  }
 }
 @media screen and (max-width: 1000px) {
   #home-image {
@@ -706,7 +749,8 @@ footer {
     #skills-header {
       input {
         background-color: var(--md-sys-color-tertiary-container);
-        padding: 0 1em 0 1em;
+        height: min-content;
+        padding: 1em;
         color: var(--md-sys-color-on-background);
       }
     }
