@@ -35,15 +35,17 @@
         opacity: 1
     }
 }
+
 @keyframes slide-top {
-  0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  100% {
-    -webkit-transform: translateY(-.5em);
-            transform: translateY(-.5em);
-  }
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    100% {
+        -webkit-transform: translateY(-.5em);
+        transform: translateY(-.5em);
+    }
 }
 
 /* --------- ANIMACIONES --------- */
@@ -217,11 +219,12 @@ footer {
     background-color: var(--md-sys-color-on-background);
     color: white;
     min-height: 100vh;
-    
+
 
     #skills-header {
         display: flex;
         align-items: center;
+
         input {
             background-color: var(--md-sys-color-tertiary-container);
             height: min-content;
@@ -256,13 +259,16 @@ footer {
                 font-size: x-large;
             }
         }
-        .cards:hover{
+
+        .cards:hover {
             animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
         }
+
         .cards:last-child {
             grid-column: 1/3;
             margin: 0 7em;
         }
+
         /*
             PENDIENTE
 
@@ -423,27 +429,32 @@ footer {
             justify-content: space-around !important;
         }
     }
-    footer{
-        section{
+
+    footer {
+        section {
             display: flex;
             flex-direction: column;
-            section{
-                p{
+
+            section {
+                p {
                     display: none;
                 }
-                h2{
+
+                h2 {
                     display: none;
                 }
             }
-            section:first-child{
+
+            section:first-child {
                 align-items: center;
                 gap: 2em;
             }
-            section:last-child{
+
+            section:last-child {
                 display: none;
             }
         }
-        
+
     }
 }
 
