@@ -1,13 +1,13 @@
 @import "tailwindcss";
 @import url("./light.css");
-
+audio{
+    display: none;
+}
 
 /* --------- ANIMACIONES --------- */
 
 
-audio{
-    display: none;
-}
+
 
 @keyframes scale-up-center {
     0% {
