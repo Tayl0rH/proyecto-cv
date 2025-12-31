@@ -350,6 +350,9 @@
   }
 }
 @import url("./light.css");
+audio {
+  display: none;
+}
 @keyframes scale-up-center {
   0% {
     transform: scale(1);
@@ -512,11 +515,14 @@ footer {
   #skills-header {
     display: flex;
     align-items: center;
-    input {
+    button {
       background-color: var(--md-sys-color-tertiary-container);
       height: min-content;
-      padding: 1em;
+      padding: .5em;
       color: var(--md-sys-color-on-background);
+    }
+    button:hover {
+      cursor: pointer;
     }
   }
   #skills-cards {
@@ -759,6 +765,14 @@ footer {
       grid-template-columns: repeat(2, 1fr);
       gap: 1.3em;
     }
+  }
+}
+#experience {
+  display: flex;
+  flex-direction: column;
+  video {
+    width: 45em;
+    margin: auto;
   }
 }
 @property --tw-font-weight {
